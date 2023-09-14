@@ -1,0 +1,128 @@
+.buttons {
+  padding-top: 6rem;
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  margin-top: 1.5rem;
+  ;
+}
+
+button {
+  border-radius: 15px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1.75rem;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #262626;
+  cursor: pointer;
+  color: white;
+  border: 3px solid black;
+  transition: 0.3s ease-in-out;
+}
+
+button:hover {
+  border: 2px solid rgb(248, 247, 247);
+}
+
+.block:before, .block:after {
+  content: '';
+  position: absolute;
+  left: -2px;
+  top: -2px;
+  background: linear-gradient(45deg, #fb0094, #0000ff, #00ff00, #ffff00, #ff0000, #fb0094,
+      #0000ff, #00ff00, #ffff00, #ff0000);
+  background-size: 400%;
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  z-index: -1;
+  animation: steam 20s linear infinite;
+}
+
+@keyframes steam {
+  0% {
+    background-position: 0 0;
+  }
+
+  50% {
+    background-position: 400% 0;
+  }
+
+  100% {
+    background-position: 0 0;
+  }
+}
+
+.block:after {
+  filter: blur(50px);
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #000;
+}
+
+.block {
+  position: relative;
+  margin: 5rem auto;
+  width: 32rem;
+  height: 39.5rem;
+  background: linear-gradient(0deg, #000, #000000);
+}
+
+.block:before, .block:after {
+  content: '';
+  position: absolute;
+  left: -2px;
+  top: -2px;
+  background: linear-gradient(45deg, #fb0094, #0000ff, #00ff00, #ffff00, #ff0000, #fb0094,
+      #0000ff, #00ff00, #ffff00, #ff0000);
+  background-size: 400%;
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  z-index: -1;
+  animation: steam 20s linear infinite;
+}
+
+@keyframes steam {
+  0% {
+    background-position: 0 0;
+  }
+
+  50% {
+    background-position: 400% 0;
+  }
+
+  100% {
+    background-position: 0 0;
+  }
+}
+
+.block:after {
+  filter: blur(50px);
+}
+
+button.span-two {
+  width: 200%;
+}
+
+.previous-operand
+{
+  height : 50px;
+  color : rgba(255, 255, 255, 0.498);
+  font-size:2.5rem;
+  text-align: right;
+  padding-right : 2rem;
+}
+  
+.current-operand{
+  height : 50px;
+  color : white;
+  font-size  :3rem;
+  padding-top : 2rem;
+  }
+  .output{
+    padding-top : 1rem;
+  }

@@ -1,0 +1,672 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+/* The :root CSS pseudo-class matches the root element of a tree representing the document. In HTML, :root represents the <html> element and is identical to the selector html, except that its specificity is higher. */
+:root /*Yahan basically variables defina kara karo*/
+{
+    --main-color : #443;
+    --border-radius : 95% 4% 97% 5%/4% 94% 3% 95%;
+    --border-radius-hover : 4% 95% 6% 95%/95% 4% 92% 5%;
+    --border : .2rem solid var(--main-color);
+    --border-hover : .2rem dashed var(--main-color);
+    /* border-radius : 50% gives a circle */
+}
+/* Resetting everything in the beginning */
+*
+{
+    font-family: 'Ubuntu', sans-serif;
+    padding : 0;
+    margin : 0;
+    box-sizing : border-box;
+    outline : none; /*Outline is just better border. Outline differs from borders! Unlike border, the outline is drawn outside the element's border, and may overlap other content. Also, the outline is NOT a part of the element's dimensions; the element's total width and height is not affected by the width of the outline*/
+    border : none;
+    text-decoration : none;
+    text-transform : capitalize;
+    transition : all .3s ease-in-out;
+}
+html
+{
+    font-size : 54.5%;  
+    overflow-x : hidden;
+    scroll-behavior : smooth;
+    scroll-padding-top : 13rem;
+}
+.header
+{
+    position : fixed;
+    top : 0;
+    left : 0;
+    right : 0;
+    display : flex;
+    align-items : center;
+    justify-content : space-between;
+    z-index : 1000;
+    background : #ffff;
+    box-shadow: 0 .5rem 1rem rgb(0, 0, 0);
+    padding : 2rem 9%;
+    background : url(Media/HeaderBackround.jpg);
+    background-repeat : repeat;
+    /* felxbox is basically used to mainly use justify content and align items */
+}
+.header .logo
+{
+    display : flex;
+    color : var(--main-color);
+    font-size : 3rem;
+    align-items : center;   
+}
+.header .navbar a
+{
+    font-size : 2.5rem;
+    margin : 0px 1rem;
+    color : var(--main-color);
+}
+.header .navbar a:hover
+{
+    text-decoration : underline;
+    transform : scale(2);
+}
+.header .logo:hover
+{
+    text-decoration : underline;
+    transform : scale(1.03);
+}
+.btn
+{
+    display : inline-block;
+    padding : 2rem;
+    border-radius : var(--border-radius);
+    color : var(--main-color);
+    background : none;
+    border : var(--border);
+    cursor : pointer;
+    margin-top : 1rem;
+    font-size : 1.7rem;
+}
+section
+{
+    padding : 2rem 9%;
+}
+.btn:hover
+{
+    border : var(--border-hover);
+    border-radius : var(--border-radius-hover);
+}
+.header .btn
+{
+    margin-top : 0;
+
+}
+img.logoimage
+{
+    height : 90px;
+    width : 90px;
+    border-radius : 50%;
+    margin-right : 20px;
+}
+#menubutton
+{
+    padding-right : 15px;
+    font-size : 4rem;
+    cursor : pointer;
+    display : none;
+}
+.home
+{
+    min-height : 100vh;
+    padding-top : 16rem;
+    background-image: url(Media/TheBackground.jpg);
+    background-position : center;
+    background-size : cover;
+}
+.home .row
+{
+    display : flex;
+    align-items : center;
+    flex-wrap : wrap;
+    gap : 1.5rem;
+}
+.review
+{
+    background : url(Media/ReviewsBackgound.jpg);
+}
+.review .review-slider
+{
+    padding : 7rem 0;
+}
+.review .review-slider .box .fa-quote-left
+{
+    position : absolute;
+    top : 2rem;
+    left : 2.5rem;
+    font-size : 6rem;
+    color : #ccc;
+    z-index : -1;
+}
+.review .review-slider .box .fa-quote-right
+{
+    position : absolute;
+    bottom : 2rem;
+    right : 2.5rem;
+    font-size : 6rem;
+    color : #ccc;
+    z-index : -1;
+}
+.review .review-slider .box:hover 
+{
+    transform : scale(1.1);
+}
+.box img
+{
+    width : 200px;
+    height : 250px;
+    border-radius : 40%;
+}
+.review .review-slider .box
+{
+    border : var(--border);
+    border-radius : var(--border-radius);
+    text-align : center;
+    position : relative;
+    z-index : 0;
+    padding : 2rem;
+    margin-bottom : 5rem;
+}
+.review .review-slider .box .stars
+{
+    padding : 2rem 0;
+    font-size : 2.5rem;
+}
+.review .review-slider .box p
+{
+    font-size : 3rem;
+    padding : 20px;
+}
+.review .review-slider .box h3
+{
+    font-size : 4rem;
+}
+.home .row .content
+{
+    flex : 1 1 42rem;
+}
+.home .row .image
+{
+    flex : 1 1 42rem;
+    padding-top : 10rem;
+    text-align : center;
+}
+div.videocontainer
+{
+    display : flex;
+    flex-direction: column;
+}
+video.CoffeeMakingVideo
+{
+    width : 100%;
+    border-radius : 20px;
+}
+span.slogan
+{
+    display : block;
+    font-size : 7rem;
+    text-shadow: 2px 2px 2px var(--main-color);
+    padding-bottom : 60px;
+    padding-right : 10px;
+    padding-top : 60px;
+}
+span.slogan:hover
+{
+    transform : scale(1.05);
+}
+span.slogan + a.btn
+{
+    font-size : 30px;
+}
+div.image .main-home-image
+{
+    border-radius : 50px;
+    height : 100%;
+    width : 100%;
+    opacity : 0.7;
+}
+div.image .main-home-image:hover
+{
+    border-radius : 50%;
+    opacity : 1;
+}
+span.videotext
+{
+    font-size : 10rem;
+    text-align : center;
+    font-weight: bolder;
+    color : rgba(70, 17, 17, 0.709);
+    padding-top : 75px;
+    padding-bottom : 75px;
+}
+@media (max-width : 1100px)
+{
+    html
+    {
+        font-size : 55%;
+    }
+    .header
+    {
+        padding : 2rem;
+    }
+    section
+    {
+        padding : 2rem;
+    }
+}
+.heading
+{
+    font-size : 9rem;
+    text-transform : uppercase;
+    color : transparent;
+    letter-spacing : .2rem;
+    text-align : center;
+    -webkit-text-stroke: 2px var(--main-color);
+    pointer-events: none;
+    max-width: 100%;
+}
+.heading span
+{
+    position : relative;
+    left : -430px;
+    display : block;
+    text-decoration : underline;
+    font-size : 50px;
+}
+.heading 
+{
+    padding-top : 100px;
+}
+div.about
+{
+    all : initial;
+    font-size : 25px;
+    padding : 0;
+}
+section.about
+{
+    background : url(Media/SecondBackground.jpg);
+    background-repeat : repeat-y;
+    background-size: cover;
+}
+@media (max-width : 1400px)
+{
+    video.ServingVideo
+    {
+        display : none;
+    }
+}
+@media (max-width : 950px)
+{
+    #menubutton
+    {
+        display : initial;
+    }
+    .header .navbar
+    {
+        position : absolute;
+        top : 99%;
+        left : 0px;
+        right : 0px;
+        background : #fff;
+        clip-path : polygon(0 0, 100% 0, 100% 0, 0 0);
+    }
+    .header .navbar.active
+    {
+        clip-path : polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    }
+    .header .navbar a
+    {
+        display : block;
+        padding-left : 17px;
+        padding-bottom : 20px;
+        margin : 0;
+        font-size : 2.2rem;
+    }
+}
+@media (max-width : 450px)
+{
+    html
+    {
+        font-size : 50%;
+    }
+}
+i
+{
+    padding-left : 10px;
+    padding-right : 10px;
+}
+.about .row
+{
+    font-size : 30px;
+    display : flex;
+    flex-wrap : wrap;
+    align-items : center;
+    justify-content: center;
+}
+h3.title
+{
+    padding-bottom : 15px;
+    padding-top : 30px;
+}
+.about .row .image 
+{
+    flex: 1 1 42rem;
+    padding: 1rem;
+}
+.about .row .content
+{
+    flex: 1 1 42rem;
+    padding: 1rem;
+    padding-left : 2rem;
+}
+.about .row .image img
+{
+    padding-top : 50px;
+    width : 100%;
+    animation : aboutImage 4s ease-in-out infinite;
+}
+@keyframes aboutImage
+{
+    0%, 100%
+    {
+        transform : scale(1);
+        border-radius : var(--border-radius-hover);
+    }
+    50%
+    {
+        transform : scale(0.8);
+        border-radius : var(--border-radius);
+    }
+}
+.about .row .content .title
+{
+    color : var(--main-color);
+    font-size : 6rem;
+    line-height : 1.8;  
+    text-transform : uppercase;
+    color : transparent;
+    letter-spacing : .2rem;
+    text-align : center;
+    -webkit-text-stroke: 1px var(--main-color);
+}
+.about .row .content p
+{
+    color : var(--main-color);
+    font-size : 2rem;
+    line-height : 1.8;  
+    padding : 1rem 0;
+}
+.about .row .content .icons-container
+{
+    display : flex;
+    gap : 0.5rem;
+    padding-top : 3rem;
+}
+.about .row .content .icons-container .icons
+{
+    flex : 1 1 15rem;
+    padding : 1.5rem;
+    text-align : center;
+    border : var(--border);
+    border-radius : var(--border-radius);
+}
+.about .row .content .icons-container .icons img
+{
+    height : 5rem;
+}
+.about .row .content .icons-container .icons h3
+{
+    font-size : 1.7rem;
+    padding-top : 1rem;
+    color : var(--main-color);
+}
+.KerelaGirl
+{
+    padding-top : 50px;
+    font-size : 50px;
+    -webkit-text-stroke: 1px var(--main-color);
+}
+a.box img
+{
+    width : 250px;
+    height : 220px;
+    padding : 2rem;
+    border-radius : 50px;
+}
+a.box div.content
+{
+    font-size : 30px;
+    color : var(--main-color);
+    text-align : center;   
+    padding-bottom: 20px; 
+}
+a.box
+{
+    border : 5px solid black;
+    border-radius : var(--border-radius);
+}
+a.box:hover
+{
+    border-radius : var(--border-radius-hover);
+    border : var(--border-hover);
+}
+.menu .box-container
+{
+    padding-top : 20px;
+    display : flex;
+    flex-wrap : wrap;
+    align-items : center;
+    justify-content : center;
+    gap : 5rem;
+}
+video.ServingVideo
+{
+    opacity : 0.4;
+    position : absolute;
+    left : 0;
+    right : 0;
+    z-index : -1;
+    height : 1000px;
+}
+section.menu h1.heading
+{
+    padding-top : 5px;
+}
+.review .review-slider .box img
+{
+    border : 5px solid black;
+    border-radius : var(--border-radius);
+}
+.review .review-slider .box:hover img
+{
+    animation : aboutImage 4s ease-in-out infinite;
+}
+.book
+{
+    background-image: url(Media/TheBackground.jpg);
+    background-position : center;
+    background-size : cover;
+}
+.Another
+{
+    padding-top : 50px;
+    padding-bottom : 30px;
+    font-size : 75px;
+    font-family :'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-align : center;
+    text-shadow : 4px 4px brown;
+}
+.book .heading
+{
+    padding-top : 135px;
+}
+.book form
+{
+    padding-top : 10px;
+    border : 10px solid black;;
+    border-radius : var(--border-radius);
+}
+.book form .box
+{
+    border : 4px solid black;
+    font-size : 5rem;
+    padding : 1rem;
+    width : 70%;
+    margin : 5rem 10rem;
+    background : none;
+    border-radius : 10px;
+}
+.book form .box:focus
+{
+    transform : scale(1.1);
+    border : var(--border-hover);
+}
+.book form .btn
+{
+    font-size : 5rem;
+    margin : 2rem 10rem;
+    border : 4px solid black;
+    width : 70%;
+}
+.footer .box-container
+{
+    display : grid;
+    grid-template-columns: repeat(auto-fit, minmax(23rem, 1fr));
+    gap : 1.5rem;
+    color : var(--main-color);
+}
+.footer .box-container .box h3
+{
+    font-size : 5rem;
+    padding-top : 7rem;
+}
+.footer .box-container .box a
+{
+    display : block;
+    font-size : 2.5rem;
+    padding-top : 3rem;
+}
+.footer .box-container .box a i
+{
+    padding-right : 2rem;
+}
+.footer .credit
+{
+    text-align : center;
+    font-size : 4rem;
+    padding-top : 4rem;
+    padding-bottom : 2rem;
+}
+.footer
+{
+    background : url(Media/FooterBackground.jpg);
+
+}
+.aboutcoffee
+{
+    padding-top : 200px;
+
+}
+.aboutcoffee .row
+{
+    padding-top : 50px;
+    padding-bottom : 50px;
+    display : flex;
+    flex-wrap : wrap;
+}
+.aboutcoffee h2
+{
+    font-size : 15rem;
+    text-align : center;
+    text-decoration :double;
+    -webkit-text-stroke: 3px var(--main-color);
+    color : transparent;
+}
+section.aboutcoffee
+{
+    background : url(Media/SecondBackground.jpg);
+    background-repeat : repeat-y;
+    background-size: cover;
+}
+.aboutcoffee .row .image 
+{
+    flex: 1 1 42rem;
+    padding: 1rem;
+}
+.aboutcoffee .row .content
+{
+    flex: 1 1 42rem;
+    padding: 1rem;
+    padding-left : 2rem;
+}
+.aboutcoffee .row .image img
+{
+    padding-top : 50px;
+    width : 100%;
+    animation : aboutImage 4s ease-in-out infinite;
+}
+.aboutcoffee .row .content .title
+{
+    color : var(--main-color);
+    font-size : 6rem;
+    line-height : 1.8;  
+    text-transform : uppercase;
+    color : transparent;
+    letter-spacing : .2rem;
+    text-align : center;
+    -webkit-text-stroke: 1px var(--main-color);
+}
+.aboutcoffee .row .content p
+{
+    color : var(--main-color);
+    font-size : 3rem;
+    line-height : 1.8;  
+    padding : 1rem 0;
+    padding-left: 2rem;
+}
+.aboutcoffee .row .content .icons-container
+{
+    display : flex;
+    gap : 0.5rem;
+    padding-top : 3rem;
+}
+.aboutcoffee .row .content .icons-container .icons
+{
+    flex : 1 1 15rem;
+    padding : 1.5rem;
+    text-align : center;
+    border : var(--border);
+    border-radius : var(--border-radius);
+}
+.aboutcoffee .row .content .icons-container .icons img
+{
+    height : 5rem;
+}
+.aboutcoffee .row .content .icons-container .icons h3
+{
+    font-size : 1.7rem;
+    padding-top : 1rem;
+    color : var(--main-color);
+}
+.aboutcoffee h3
+{
+    font-size : 11rem;
+    text-align : center;
+    text-decoration :double;
+    -webkit-text-stroke: 3px var(--main-color);
+    color : transparent;
+}
+.aboutcoffee h4
+{
+    padding-top : 3rem;
+    padding-bottom : 3rem;
+    font-size : 8rem;
+    text-align : center;
+    text-decoration :double;
+    -webkit-text-stroke: 2px var(--main-color);
+    color : transparent;
+}
